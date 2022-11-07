@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1 align="center">Редактирование пользователя</h1>
-<form align="center" th:method="PATCH" th:action="@{/{id}(id=${user.getId()})}" th:object="${user}">
+<form align="center" th:method="PATCH" th:action="@{/update(id=${user.getId()})}" th:object="${user}">
 
 
     <label>Имя
@@ -19,7 +19,7 @@
     <label>Возраст
         <input type="text" th:field="*{age}" id="age" required pattern="[0-9]+$"/>
     </label>
-    <input type="submit" value = "Применить"/>
+    <input type="submit" value="Применить"/>
 </form>
 </body>
 </html>

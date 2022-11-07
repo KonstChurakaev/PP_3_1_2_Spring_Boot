@@ -19,7 +19,7 @@ public class UsersController {
 
     @GetMapping("/users")
     public String getListAllUsers(Model model) {
-        model.addAttribute("users",  userService.getAllUser());
+        model.addAttribute("users", userService.getAllUser());
         return "users";
     }
 
@@ -43,9 +43,9 @@ public class UsersController {
     }
 
 
-    @PostMapping("/{id}")
-    public String updateUser(@ModelAttribute("user") User user, @PathVariable("id") Long id) {
-        userService.updateUser(id, user);
+    @PostMapping("/update")
+    public String updateUser(@ModelAttribute("user") User user) {
+        userService.addUser(user);
         return "redirect:users";
     }
 

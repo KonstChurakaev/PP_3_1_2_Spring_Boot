@@ -37,8 +37,4 @@ public class UserServiceImpl implements UserService {
         return userDao.getOne(id);
     }
 
-    @Override
-    public void updateUser(Long id, User user) {
-        userDao.save(user);
-    }
 }
